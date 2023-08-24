@@ -12,7 +12,13 @@ class Medicamento:
         self.__nombre = med 
     def asignarDosis(self,med):
         self.__dosis = med 
-        
+    
+    def verificarExiste(self,nombre):
+        for r in self.__lista_medicamentos:
+            
+            if nombre == r.verNombre():
+                return True
+        return False    
 class Mascota:
     
     def __init__(self):
